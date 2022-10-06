@@ -1,0 +1,62 @@
+<template>
+    <lightning-card title="Pokemons">
+        <template if:true={data}>
+            <div class="slds-card__body_inner">
+                <div class="slds-grid slds-p-around_small slds-align_absolute-center">
+                    <!-- Filtrado por nombre -->
+                    <div class="slds-size_1-of-3 slds-align_absolute-center">
+                        <lightning-input type="search" onchange={handleSearch} label="Busca tu pokemon: "
+                            placeholder="Ingrese el nombre del pokemon..." value={search}>
+                        </lightning-input>
+                    </div>
+                    <!-- Filtrado por picklist -->
+                    <div class="slds-size_1-of-3 slds-align_absolute-center">
+                        <lightning-combobox
+                            name="tipo"
+                            label="Tipo de pokemon: "
+                            value={tipo}
+                            placeholder="Seleccione el tipo de Pokemon..."
+                            options={typeOptions}
+                            onchange={handleTypeChange}>
+                        </lightning-combobox>
+                    </div>
+                    <div class="slds-size_1-of-3 slds-align_absolute-center">
+                        <lightning-combobox
+                            name="generacion"
+                            label="Generación de pokemon: "
+                            value={generacion}
+                            placeholder="Seleccione la generación de Pokemon..."
+                            options={genOptions}
+                            onchange={handleGenChange}>
+                        </lightning-combobox>
+                    </div>
+                </div>
+                <!-- Contador -->
+                <div class="slds-text-heading_medium slds-align_absolute-center">
+                    <h3>Pokemones encontrados: {data.length}</h3>
+                </div>
+                <!-- Visualización de registros -->
+                <div class="slds-grid slds-p-around_small slds-align_absolute-center slds-wrap">
+                    <template for:each={data} for:item="pokemon">
+                        <div key={pokemon.Id} class="slds-col slds-size_1-of-8 slds-align_absolute-center">
+                            <lightning-card title={pokemon.Name}>
+                                <div>
+                                    <div>
+                                        <img src={pokemon.Imagen__c} alt="Ilustración del Pokemon." onclick={handleClick} data-id={pokemon.Id}></img>
+                                    </div>
+                                    <div>
+                                        <br><b>Índice:</b> {pokemon.ExtId__c}.<br>
+                                        <b>Tipo:</b> {pokemon.Tipos__c}.<br>
+                                        <b>Altura:</b> {pokemon.Altura__c} ft.<br>
+                                        <b>Peso:</b> {pokemon.Peso__c} lbs.<br>
+                                        <b>Generación:</b> {pokemon.Generacion__c}.<br>
+                                    </div>
+                                </div>
+                            </lightning-card>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </template>
+    </lightning-card>
+</template>

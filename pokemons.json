@@ -1,0 +1,121 @@
+{
+   "height": 7,
+   "id": 1,
+   "name": "bulbasaur",
+   "order": 1,
+   "stats": [
+   {
+   "base_stat": 45,
+   "effort": 0,
+   "stat": {
+   "name": "hp",
+   "url": "https://pokeapi.co/api/v2/stat/1/"
+   }
+   },
+   {
+   "base_stat": 49,
+   "effort": 0,
+   "stat": {
+   "name": "attack",
+   "url": "https://pokeapi.co/api/v2/stat/2/"
+   }
+   },
+   {
+   "base_stat": 49,
+   "effort": 0,
+   "stat": {
+   "name": "defense",
+   "url": "https://pokeapi.co/api/v2/stat/3/"
+   }
+   },
+   {
+   "base_stat": 65,
+   "effort": 1,
+   "stat": {
+   "name": "special-attack",
+   "url": "https://pokeapi.co/api/v2/stat/4/"
+   }
+   },
+   {
+   "base_stat": 65,
+   "effort": 0,
+   "stat": {
+   "name": "special-defense",
+   "url": "https://pokeapi.co/api/v2/stat/5/"
+   }
+   },
+   {
+   "base_stat": 45,
+   "effort": 0,
+   "stat": {
+   "name": "speed",
+   "url": "https://pokeapi.co/api/v2/stat/6/"
+   }
+   }
+   ],
+   "types": [
+   {
+   "slot": 1,
+   "type": {
+   "name": "grass",
+   "url": "https://pokeapi.co/api/v2/type/12/"
+   }
+   },
+   {
+   "slot": 2,
+   "type": {
+   "name": "poison",
+   "url": "https://pokeapi.co/api/v2/type/4/"
+   }
+   }
+   ],
+   "weight": 69
+}
+{
+   "effect_entries": [
+   {
+   "effect": "Attacken die Schaden verursachen haben mit jedem Treffer eine 10% Chance das Ziel zurückschrecken zu lassen, wenn die Attacke dies nicht bereits als Nebeneffekt hat.\n\nDer Effekt stapelt nicht mit dem von getragenen Items.\n\nAußerhalb vom Kampf: Wenn ein Pokémon mit dieser Fähigkeit an erster Stelle im Team steht, tauchen wilde Pokémon nur halb so oft auf.",
+   "language": {
+   "name": "de",
+   "url": "https://pokeapi.co/api/v2/language/6/"
+   },
+   "short_effect": "Mit jedem Treffer besteht eine 10% Chance das Ziel zurückschrecken zu lassen."
+   },
+   {
+   "effect": "This Pokémon's damaging moves have a 10% chance to make the target flinch with each hit if they do not already cause flinching as a secondary effect.\n\nThis ability does not stack with a held item.\n\nOverworld: The wild encounter rate is halved while this Pokémon is first in the party.",
+   "language": {
+   "name": "en",
+   "url": "https://pokeapi.co/api/v2/language/9/"
+   },
+   "short_effect": "Has a 10% chance of making target Pokémon flinch with each hit."
+   }
+   ],
+   "id": 1
+}
+{
+   "accuracy": 100,
+   "effect_chance": null,
+   "effect_entries": [
+   {
+   "effect": "Inflicts regular damage.",
+   "language": {
+   "name": "en",
+   "url": "https://pokeapi.co/api/v2/language/9/"
+   },
+   "short_effect": "Inflicts regular damage with no additional effect."
+   }
+   ],
+   "id": 1,
+   "name": "pound",
+   "power": 40,
+   "pp": 35,
+   "priority": 0,
+   "target": {
+   "name": "selected-pokemon",
+   "url": "https://pokeapi.co/api/v2/move-target/10/"
+   },
+   "type": {
+   "name": "normal",
+   "url": "https://pokeapi.co/api/v2/type/1/"
+   }
+}
